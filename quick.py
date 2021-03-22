@@ -10,9 +10,9 @@ def get():
     from selenium.webdriver.common.by import By
     from selenium import webdriver
     chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--headless') # Starting chrome in headless mode to save computation power
     chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--disable-dev-shm-usage') 
     path_to_extension = '/content/drive/MyDrive/3.5.31_0' #Path to adblocker extension folder
     chrome_options.add_argument('load-extension=' + path_to_extension)
     prefs = {'download.default_directory' : '/content/drive/MyDrive/myBot1/'} # path to dowload directory
@@ -44,7 +44,7 @@ get()
 print('Link Loaded')
 
 import os
-os.chdir("/content/drive/MyDrive/myBot/")
+os.chdir("/content/drive/MyDrive/myBot/") # path to save the files
 i=0
 for q in range(0,len(a),1):
   import urllib.request
