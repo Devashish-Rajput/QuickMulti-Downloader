@@ -13,9 +13,9 @@ def get():
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
-    path_to_extension = '/content/drive/MyDrive/3.5.31_0'
+    path_to_extension = '/content/drive/MyDrive/3.5.31_0' #Path to adblocker extension folder
     chrome_options.add_argument('load-extension=' + path_to_extension)
-    prefs = {'download.default_directory' : '/content/drive/MyDrive/myBot1/'}
+    prefs = {'download.default_directory' : '/content/drive/MyDrive/myBot1/'} # path to dowload directory
     chrome_options.add_experimental_option('prefs', prefs)
     driver =webdriver.Chrome('chromedriver',options=chrome_options)
 
